@@ -82,7 +82,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto.hasOwn.Property){
+  if (objeto.hasOwnProperty(propiedad)){
     return true;
   }
   return false;

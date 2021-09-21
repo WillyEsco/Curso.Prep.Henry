@@ -103,7 +103,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
-   usuario.password=nuevaPasword;}
+   usuario.password=nuevaPasword;
    return usuario;
 }
 
@@ -112,6 +112,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
+  return usuario.amigos.push(nuevoAmigo);
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -120,6 +121,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for(let i=0;i<usuarios.length;i++){
+    usuarios[i].esPremium=true;
+  }
+
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -129,6 +134,11 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var sumalikes=0;
+  for(let i =0; i<usuario.posts.length; i++){
+     sumalikes=sumalikes+usuario.posts[i].likes;
+  }
+  return sumalikes;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -141,7 +151,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  producto.calcularPrecioDescuento=function(){
+       return this.precio-(this.precio*this.porcrntajeDeDescuanto)
+  }
+  return producto
 }
 
 // No modificar nada debajo de esta línea

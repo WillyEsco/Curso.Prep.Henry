@@ -57,12 +57,9 @@ function agregarStringInvertida() {
     //   Edad: 22,
     //   Domicilio: 'Saavedra 123'
     //  }
- //--GFE------la llamada de todo seria:
-    // const per1 = mew Persona("Pepe", "Pechelo", 205, "a la vuelta ja")
-    // crea, instancia y pasa los valores que toma el contructor luego
+  
   class Persona {
-   // constructor(/*Escribir los argumentos que recibe el constructor*/) {
-  // Crea el constructor:
+ 
     constructor(nombre,apellido, edad,domicilio) {
       this.nombre=nombre;
       this.apellido=apellido;
@@ -70,28 +67,15 @@ function agregarStringInvertida() {
       this.domicilio=domicilio;
     }
     detalle () {
-      // devuelvo directamente el objeto, por eso las llaves
+   
      return {nombre:this.nombre,
             apellido:this.apellido,
             edad:this.edad,
             domicilio:thisdomicilio,};
   }
-  
-    // otra forma para el metodo¨:
-    // detalle=()=>{
-    // } 
-    // otra mas:
-    // detalle(){
-    //
    
     }
-    }
-}
-// otra forma:
-// function Persona(nombre,apellido, edad, domicilio) {
-// }
-// Persona.prototype.detalle=() => {
-// }
+ 
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
@@ -107,7 +91,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-  Persona.prototype.datos=()=> {
+  Persona.prototype.datos (){
     return  this.edad+", "+this.edad+" años";
   }
 }

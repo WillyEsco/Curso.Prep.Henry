@@ -71,7 +71,7 @@ function agregarStringInvertida() {
      return {nombre:this.nombre,
             apellido:this.apellido,
             edad:this.edad,
-            domicilio:thisdomicilio,};
+            domicilio:this.domicilio,};
   }
    
     }

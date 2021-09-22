@@ -20,6 +20,7 @@ function crearUsuario() {
     }
    
   }
+  return Usuario;
 }
 
 function agregarMetodoPrototype(Constructor) {
@@ -40,7 +41,7 @@ function agregarStringInvertida() {
   String.prototype.reverse = function reverse() {
     var inverso = '';
     for (var i = this.length - 1; i >= 0 ; i--){
-      inverso = inverso + this.chartAt(i);
+      inverso = inverso + this.charAt(i);
     }
     return inverso;
   }
@@ -91,7 +92,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-  Persona.prototype.datos (){
+  Persona.prototype.datos = function () {
     return  this.nombre+", "+this.edad+" años";
   }
 }
